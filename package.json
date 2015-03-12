@@ -1,0 +1,33 @@
+{
+  "name": "gulp-zkflow-nodemodule",
+  "version": "0.0.0",
+  "description": "Gulp tasks for working on node module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaklinaczekodu/gulp-zkflow-nodemodule.git"
+  },
+  "keywords": [
+    "gulp",
+    "module",
+    "tasks"
+  ],
+  "author": "Piotr Baranowski <bolczyslaw@gmail.com> (https://github.com/zaklinaczekodu)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaklinaczekodu/gulp-zkflow-nodemodule/issues"
+  },
+  "homepage": "https://github.com/zaklinaczekodu/gulp-zkflow-nodemodule",
+  "dependencies": {
+    "gulp-jsbeautifier": "0.0.6",
+    "gulp-jshint": "^1.9.2",
+    "jshint-stylish": "^1.0.1",
+    "run-sequence": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
