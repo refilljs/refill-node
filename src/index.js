@@ -1,8 +1,18 @@
 'use strict';
 
-function gulpZkflowNodemodule() {
+function getGulp(externalGulp) {
 
-  var gulp = require('gulp');
+  if (typeof externalGulp === 'undefined') {
+    return require('gulp');
+  }
+
+  return externalGulp;
+
+}
+
+function gulpZkflowNodemodule(options, externalGulp) {
+
+  var gulp = getGulp(externalGulp);
   var mode = {
     jsbeautifierVerifyOnly: false,
     jshintFailOnError: false,
