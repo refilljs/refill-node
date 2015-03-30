@@ -6,7 +6,7 @@ function beautifyTask(mode, gulp) {
 
   gulp.task('beautify', function() {
 
-    return gulp
+    var stream = gulp
       .src([
         'src/**/*.js',
         'gulpfile.js'
@@ -19,8 +19,13 @@ function beautifyTask(mode, gulp) {
         js: {
           indentSize: '2'
         }
-      }))
-      .pipe(gulp.dest(''));
+      }));
+
+    if (!mode.jsbeautifierVerifyOnly) {
+      stream = stream.pipe(gulp.dest(''));
+    }
+
+    return stream;
 
   });
 
