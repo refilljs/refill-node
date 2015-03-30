@@ -1,6 +1,6 @@
 {
   "name": "gulp-zkflow-nodemodule",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Gulp tasks for working on node module",
   "main": "src/index.js",
   "scripts": {
