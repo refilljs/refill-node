@@ -23,6 +23,7 @@ function gulpZkflowNodemodule(options, externalGulp) {
   require('./tasks/beautify')(mode, gulp);
   require('./tasks/default')(mode, gulp);
   require('./tasks/ci')(mode, gulp);
+  require('./tasks/test')(mode, gulp);
 
 }
 

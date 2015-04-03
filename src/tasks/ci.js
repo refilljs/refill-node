@@ -11,7 +11,7 @@ function ciTask(mode, gulp) {
     mode.jsbeautifierVerifyOnly = true;
 
     runSequence(
-      ['jshint', 'beautify'],
+      ['jshint', 'beautify', 'test'],
       done
     );
 
