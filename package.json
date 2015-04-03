@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/zaklinaczekodu/gulp-zkflow-nodemodule",
   "dependencies": {
+    "gulp-jasmine": "^2.0.1",
     "gulp-jsbeautifier": "0.0.6",
     "gulp-jshint": "^1.9.2",
     "jshint-stylish": "^1.0.1",

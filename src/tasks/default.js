@@ -7,7 +7,7 @@ function defaultTask(mode, gulp) {
     var runSequence = require('run-sequence').use(gulp);
 
     runSequence(
-      'jshint',
+      ['jshint', 'test'],
       done
     );
 
