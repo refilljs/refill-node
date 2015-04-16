@@ -1,26 +1,32 @@
 'use strict';
 
-function beautifyTask(mode, gulp) {
+function getTestTask(options, gulp, mode) {
 
-  gulp.task('test', function() {
+  function testTask() {
 
     var jasmine = require('gulp-jasmine');
 
     function testStream() {
-      return gulp.src('src/**/*Spec.js')
+      return gulp.src(options.globs)
         .pipe(jasmine({
           includeStackTrace: mode.dev
         }));
     }
 
     if (mode.dev) {
-      gulp.watch('src/**/*', testStream);
+      gulp.watch(options.watchGlobs, testStream);
     }
 
     return testStream();
 
-  });
+  }
+
+  return testTask;
 
 }
 
-module.exports = beautifyTask;
+exports.getTask = getTestTask;
+exports.defaultOptions = {
+  globs: 'src/**/*Spec.js',
+  watchGlobs: 'src/**/*.js'
+};

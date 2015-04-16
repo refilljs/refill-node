@@ -1,19 +1,15 @@
 'use strict';
 
-function jshintTask(mode, gulp) {
+function getJshintTask(options, gulp, mode) {
 
-  gulp.task('jshint', function() {
+  function jshintTask() {
 
     var jshint = require('gulp-jshint');
-    var glob = [
-      'src/**/*.js',
-      'gulpfile.js'
-    ];
 
     function jshintStream() {
 
       var stream = gulp
-        .src(glob)
+        .src(options.globs)
         .pipe(jshint())
         .pipe(jshint.reporter(require('jshint-stylish')));
 
@@ -25,18 +21,24 @@ function jshintTask(mode, gulp) {
 
     }
 
-    if (false === mode.dev) {
-      return jshintStream();
+    if (mode.dev) {
+      gulp.watch(options.globs, function() {
+        jshintStream();
+      });
     }
 
-    jshintStream();
+    return jshintStream();
 
-    gulp.watch(glob, function() {
-      jshintStream();
-    });
+  }
 
-  });
+  return jshintTask;
 
 }
 
-module.exports = jshintTask;
+exports.getTask = getJshintTask;
+exports.defaultOptions = {
+  globs: [
+    'src/**/*.js',
+    'gulpfile.js'
+  ]
+};

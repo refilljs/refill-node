@@ -1,18 +1,17 @@
 'use strict';
 
-function defaultTask(mode, gulp) {
+function getDefaultTask(options, gulp) {
 
-  gulp.task('default', function(done) {
+  function defaultTask(done) {
 
     var runSequence = require('run-sequence').use(gulp);
 
-    runSequence(
-      ['jshint', 'test'],
-      done
-    );
+    runSequence.apply(null, options.sequence.concat([done]));
 
-  });
+  }
+
+  return defaultTask;
 
 }
 
-module.exports = defaultTask;
+exports.getTask = getDefaultTask;
