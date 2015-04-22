@@ -1,8 +1,8 @@
 'use strict';
 
-function ciTask(mode, gulp) {
+function getCiTask(options, gulp, mode) {
 
-  gulp.task('ci', function(done) {
+  function ciTask(done) {
 
     var runSequence = require('run-sequence').use(gulp);
 
@@ -10,13 +10,12 @@ function ciTask(mode, gulp) {
     mode.jshintFailOnError = true;
     mode.jsbeautifierVerifyOnly = true;
 
-    runSequence(
-      ['jshint', 'beautify', 'test'],
-      done
-    );
+    runSequence.apply(null, options.sequence.concat([done]));
 
-  });
+  }
+
+  return ciTask;
 
 }
 
-module.exports = ciTask;
+exports.getTask = getCiTask;

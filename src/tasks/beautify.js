@@ -1,16 +1,13 @@
 'use strict';
 
-function beautifyTask(mode, gulp) {
+function getBeautifyTask(options, gulp, mode) {
 
-  var jsbeautifier = require('gulp-jsbeautifier');
+  function beautifyTask() {
 
-  gulp.task('beautify', function() {
+    var jsbeautifier = require('gulp-jsbeautifier');
 
     var stream = gulp
-      .src([
-        'src/**/*.js',
-        'gulpfile.js'
-      ], {
+      .src(options.globs, {
         base: './'
       })
       .pipe(jsbeautifier({
@@ -27,8 +24,16 @@ function beautifyTask(mode, gulp) {
 
     return stream;
 
-  });
+  }
+
+  return beautifyTask;
 
 }
 
-module.exports = beautifyTask;
+exports.getTask = getBeautifyTask;
+exports.defaultOptions = {
+  globs: [
+    'src/**/*.js',
+    'gulpfile.js'
+  ]
+};

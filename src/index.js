@@ -1,5 +1,16 @@
 'use strict';
 
+/**
+ * gulp-zkflow-nodemodule module
+ * @module gulp-zkflow-nodemodule
+ */
+
+/**
+ * get gulp
+ * @private
+ * @param externalGulp
+ * @return {*}
+ */
 function getGulp(externalGulp) {
 
   if (typeof externalGulp === 'undefined') {
@@ -10,6 +21,16 @@ function getGulp(externalGulp) {
 
 }
 
+/**
+ * Gulp zkflow nodemodule
+ * @alias module:gulp-zkflow-nodemodule
+ * @param {object} [options] Options
+ * @param {object} [options.webserver] Webserver task options
+ * @param {object} [options.webserver.dependencies=[]] Webserver task dependencies
+ * @param {gulp} [externalGulp=require('gulp')]
+ * a gulp object, which will be used to define tasks.
+ * If you see "Task 'taskname' is not in your gulpfile" you probably should put require('gulp') here.
+ */
 function gulpZkflowNodemodule(options, externalGulp) {
 
   var gulp = getGulp(externalGulp);
@@ -18,12 +39,28 @@ function gulpZkflowNodemodule(options, externalGulp) {
     jshintFailOnError: false,
     dev: true
   };
+  var loadTasks = require('gulp-zkflow-load-tasks');
 
-  require('./tasks/jshint')(mode, gulp);
-  require('./tasks/beautify')(mode, gulp);
-  require('./tasks/default')(mode, gulp);
-  require('./tasks/ci')(mode, gulp);
-  require('./tasks/test')(mode, gulp);
+  loadTasks(mode, options, gulp, {
+    beautify: require('./tasks/beautify'),
+    docs: require('./tasks/docs'),
+    jshint: require('./tasks/jshint'),
+    test: require('./tasks/test'),
+    webserver: require('./tasks/webserver'),
+    ci: {
+      task: require('./tasks/ci'),
+      sequence: [
+        ['jshint', 'beautify', 'test', 'docs']
+      ]
+    },
+    default: {
+      task: require('./tasks/default'),
+      sequence: [
+        ['jshint', 'test', 'docs'],
+        'webserver'
+      ]
+    }
+  });
 
 }
 
