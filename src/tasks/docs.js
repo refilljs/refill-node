@@ -7,7 +7,7 @@ function getDocsTask(options, gulp, mode) {
     var exec = require('child_process').exec;
     var done = false;
     var path = require('path');
-    var jsdocPath = path.join(__dirname, '..', '..', 'node_modules', '.bin', 'jsdoc');
+    var jsdocPath = path.join(process.cwd(), 'node_modules', '.bin', 'jsdoc');
 
     function generateJsdoc() {
 

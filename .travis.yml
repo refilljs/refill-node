@@ -1,6 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
+  - 0.10
+  - 0.12
+  - 4
+
+matrix:
+  allow_failures:
+    - node_js: 4
 
 before_install:
   - npm update -g npm
@@ -14,3 +20,4 @@ deploy:
   api_key: $npmApiKey
   on:
     tags: true
+    repo: zaklinaczekodu/gulp-zkflow-nodemodule
