@@ -1,3 +1,6 @@
+sudo: required
+dist: trusty
+
 addons:
   apt:
     sources:
@@ -15,6 +18,7 @@ node_js:
 
 os:
   - linux
+  - osx
 
 env:
   global:

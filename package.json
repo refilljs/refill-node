@@ -22,7 +22,7 @@
     "gulp": "3.9.1"
   },
   "peerDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "3.*"
   },
   "dependencies": {
     "lodash.defaults": "4.2.0",
