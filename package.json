@@ -1,11 +1,11 @@
 {
-  "name": "zkflow-node",
+  "name": "refill-node",
   "version": "1.0.0",
-  "description": "ZKflow for node",
+  "description": "Refill for node",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaklinaczekodu/zkflow-node.git"
+    "url": "https://github.com/refilljs/refill-node.git"
   },
   "keywords": [
     "gulp",
@@ -15,9 +15,9 @@
   "author": "Piotr Baranowski <piotr.baranowski@zaklinaczekodu.com> (https://github.com/zaklinaczekodu)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zaklinaczekodu/zkflow-node/issues"
+    "url": "https://github.com/refilljs/refill-node/issues"
   },
-  "homepage": "https://github.com/zaklinaczekodu/zkflow-node",
+  "homepage": "https://github.com/refilljs/refill-node",
   "devDependencies": {
     "gulp": "3.9.1"
   },

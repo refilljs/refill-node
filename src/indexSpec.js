@@ -1,6 +1,6 @@
 'use strict';
 
-describe('zkflowNode', function() {
+describe('refillNode', function() {
 
   it('should load without error', function() {
     require('./');

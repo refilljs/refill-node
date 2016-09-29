@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @module zkflow-node
+ * @module refill-node
  */
 
 module.exports = {

@@ -1,22 +1,22 @@
-# ZKflow for node
+# Refill for node
 
-Gulp tasks for node projects powered by [ZKflow](https://github.com/zaklinaczekodu/zkflow)
+Gulp tasks for node projects powered by [refill](https://github.com/refilljs/refill)
 
-[<img alt="Made by Zaklinacze Kodu" src="http://zaklinaczekodu.com/_assets/madeBy.svg" width="200">](http://zaklinaczekodu.com)
+[<img alt="Made by Zaklinacze Kodu" src="http://refilljs.com/_assets/madeBy.svg" width="200">](http://zaklinaczekodu.com)
 
 Shields
 -------
 
-[![npm](https://img.shields.io/npm/v/zkflow-node.svg?style=flat-square)](https://www.npmjs.com/package/zkflow-node)
-[![npm](https://img.shields.io/npm/l/zkflow-node.svg?style=flat-square)](https://www.npmjs.com/package/zkflow-node)
-[![npm](https://img.shields.io/npm/dm/zkflow-node.svg?style=flat-square)](https://www.npmjs.com/package/zkflow-node)<br>
-[![Travis](https://img.shields.io/travis/zaklinaczekodu/zkflow-node/master.svg?style=flat-square)](https://travis-ci.org/zaklinaczekodu/zkflow-node)
-[![Code Climate](https://img.shields.io/codeclimate/github/zaklinaczekodu/zkflow-node.svg?style=flat-square)](https://codeclimate.com/github/zaklinaczekodu/zkflow-node)<br>
-[![David](https://img.shields.io/david/zaklinaczekodu/zkflow-node.svg?style=flat-square)](https://david-dm.org/zaklinaczekodu/zkflow-node)
-[![David](https://img.shields.io/david/dev/zaklinaczekodu/zkflow-node.svg?style=flat-square)](https://david-dm.org/zaklinaczekodu/zkflow-node)<br>
-[![GitHub forks](https://img.shields.io/github/forks/zaklinaczekodu/zkflow-node.svg?style=flat-square)](https://github.com/zaklinaczekodu/zkflow-node)
-[![GitHub stars](https://img.shields.io/github/stars/zaklinaczekodu/zkflow-node.svg?style=flat-square)](https://github.com/zaklinaczekodu/zkflow-node)
-[![GitHub followers](https://img.shields.io/github/followers/zaklinaczekodu.svg?style=flat-square)](https://github.com/zaklinaczekodu/zkflow-node)
+[![npm](https://img.shields.io/npm/v/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)
+[![npm](https://img.shields.io/npm/l/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)
+[![npm](https://img.shields.io/npm/dm/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)<br>
+[![Travis](https://img.shields.io/travis/refilljs/refill-node/master.svg?style=flat-square)](https://travis-ci.org/refilljs/refill-node)
+[![Code Climate](https://img.shields.io/codeclimate/github/refilljs/refill-node.svg?style=flat-square)](https://codeclimate.com/github/refilljs/refill-node)<br>
+[![David](https://img.shields.io/david/refilljs/refill-node.svg?style=flat-square)](https://david-dm.org/refilljs/refill-node)
+[![David](https://img.shields.io/david/dev/refilljs/refill-node.svg?style=flat-square)](https://david-dm.org/refilljs/refill-node)<br>
+[![GitHub forks](https://img.shields.io/github/forks/refilljs/refill-node.svg?style=flat-square)](https://github.com/refilljs/refill-node)
+[![GitHub stars](https://img.shields.io/github/stars/refilljs/refill-node.svg?style=flat-square)](https://github.com/refilljs/refill-node)
+[![GitHub followers](https://img.shields.io/github/followers/refilljs.svg?style=flat-square)](https://github.com/refilljs/refill-node)
 
 Quickstart
 ----------
@@ -24,18 +24,18 @@ Quickstart
 Just put this code in gulpfile.js
 
 ```javaScript
-require('zkflow-node').init();
+require('refill-node').init();
 ```
 
 Usage
 -----
 
-Make sure you understand [how ZKflow works](https://github.com/zaklinaczekodu/zkflow)
+Make sure you understand [how Refill works](https://github.com/refilljs/refill)
 
 ### init
 
 ```javaScript
-require('zkflow-node').init(options, gulp);
+require('refill-node').init(options, gulp);
 ```
 
 #### gulp
@@ -43,7 +43,7 @@ require('zkflow-node').init(options, gulp);
 Optional. If you get task not found error you probably should do
 
 ```javaScript
-require('zkflow-node').init(options, require('gulp'));
+require('refill-node').init(options, require('gulp'));
 ```
 
 #### options
@@ -53,7 +53,7 @@ Optional. Default options
 ```javaScript
 {
   'lint-js': {
-    task: require('zkflow-task-eslint'),
+    task: require('refill-task-eslint'),
     eslint: {
       rules: {
         quotes: [2, 'single'],
@@ -80,10 +80,10 @@ Optional. Default options
     }
   },
   test: {
-    task: require('zkflow-task-jasmine')
+    task: require('refill-task-jasmine')
   },
   ci: {
-    task: require('zkflow-task-sequence'),
+    task: require('refill-task-sequence'),
     sequence: ['lint-js', 'test'],
     mode: {
       watch: false,
@@ -91,7 +91,7 @@ Optional. Default options
     }
   },
   default: {
-    task: require('zkflow-task-sequence'),
+    task: require('refill-task-sequence'),
     sequence: ['lint-js', 'test'],
     mode: {
       eslintFix: false
@@ -103,7 +103,7 @@ Optional. Default options
 ### mode
 
 ```javaScript
-require('zkflow-node').mode;
+require('refill-node').mode;
 ```
 
 Default mode
