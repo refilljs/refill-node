@@ -1,6 +1,6 @@
 'use strict';
 
-var zkflow = require('zkflow');
+var refill = require('refill');
 var forEach = require('lodash.foreach');
 var defaults = require('lodash.defaults');
 var mode = require('./mode');
@@ -11,7 +11,7 @@ function init(options, externalGulp) {
   var computedOptions;
   var defaultOptions = {
     'lint-js': {
-      task: require('zkflow-task-eslint'),
+      task: require('refill-task-eslint'),
       eslint: {
         rules: {
           quotes: [2, 'single'],
@@ -30,10 +30,11 @@ function init(options, externalGulp) {
           'key-spacing': 2,
           'object-curly-spacing': [2, 'always']
         },
-        env: {
-          'node': true,
-          'jasmine': true
-        },
+        envs: [
+          'node',
+          'jasmine',
+          'es6'
+        ],
         extends: 'eslint:recommended'
       }
     },
@@ -64,7 +65,7 @@ function init(options, externalGulp) {
     computedOptions[taskName] = defaults({}, options[taskName], taskOptions);
   });
 
-  zkflow(computedOptions, getGulp(externalGulp), mode);
+  refill(computedOptions, getGulp(externalGulp), mode);
 
 }
 
