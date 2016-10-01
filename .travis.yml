@@ -36,5 +36,6 @@ deploy:
   api_key: $NPM_API_KEY
   on:
     node: 6
+    condition: $TRAVIS_OS_NAME == linux
     tags: true
     repo: refilljs/refill-node
