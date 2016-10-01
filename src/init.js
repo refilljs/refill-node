@@ -42,7 +42,7 @@ function init(options, externalGulp) {
       task: require('zkflow-task-jasmine')
     },
     ci: {
-      task: require('zkflow-task-sequence'),
+      task: require('refill-task-sequence'),
       sequence: ['lint-js', 'test'],
       mode: {
         watch: false,
@@ -50,7 +50,7 @@ function init(options, externalGulp) {
       }
     },
     default: {
-      task: require('zkflow-task-sequence'),
+      task: require('refill-task-sequence'),
       sequence: ['lint-js', 'test'],
       mode: {
         eslintFix: false
