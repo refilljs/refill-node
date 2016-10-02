@@ -39,7 +39,7 @@ function init(options, externalGulp) {
       }
     },
     test: {
-      task: require('zkflow-task-jasmine')
+      task: require('refill-task-jasmine')
     },
     ci: {
       task: require('refill-task-sequence'),

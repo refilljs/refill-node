@@ -4,6 +4,8 @@ Gulp tasks for node projects powered by [refill](https://github.com/refilljs/ref
 
 [<img alt="Made by Zaklinacze Kodu" src="http://refilljs.com/_assets/madeBy.svg" width="200">](http://zaklinaczekodu.com)
 
+[Facebook](https://www.facebook.com/zaklinaczekodu)
+
 Shields
 -------
 
@@ -114,6 +116,11 @@ Default mode
   eslintFix: true
 }
 ```
+
+Changelog
+---------
+
+[Changelog at github](https://github.com/refilljs/refill-node/releases)
 
 Sponsors
 --------
