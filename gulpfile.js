@@ -1,5 +1,5 @@
 'use strict';
 
-var zkflowNode = require('./src/');
+var refillNode = require('./src/');
 
-zkflowNode.init();
+refillNode.init();

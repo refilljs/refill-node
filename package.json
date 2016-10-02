@@ -1,11 +1,11 @@
 {
-  "name": "zkflow-node",
+  "name": "refill-node",
   "version": "1.0.0",
-  "description": "ZKflow for node",
+  "description": "Refill for node",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaklinaczekodu/zkflow-node.git"
+    "url": "https://github.com/refilljs/refill-node.git"
   },
   "keywords": [
     "gulp",
@@ -15,21 +15,25 @@
   "author": "Piotr Baranowski <piotr.baranowski@zaklinaczekodu.com> (https://github.com/zaklinaczekodu)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zaklinaczekodu/zkflow-node/issues"
+    "url": "https://github.com/refilljs/refill-node/issues"
   },
-  "homepage": "https://github.com/zaklinaczekodu/zkflow-node",
+  "homepage": "https://github.com/refilljs/refill-node",
+  "engines": {
+    "node": ">=4.2",
+    "npm": ">=3.3.3"
+  },
   "devDependencies": {
     "gulp": "3.9.1"
   },
   "peerDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3"
   },
   "dependencies": {
-    "lodash.defaults": "4.0.1",
-    "lodash.foreach": "4.1.0",
-    "zkflow": "1.1.0",
-    "zkflow-task-eslint": "0.1.1",
-    "zkflow-task-jasmine": "1.0.1",
-    "zkflow-task-sequence": "1.0.1"
+    "lodash.defaults": "4.2.0",
+    "lodash.foreach": "4.5.0",
+    "refill": "1.2.1",
+    "refill-task-eslint": "2.0.1",
+    "refill-task-jasmine": "1.1.0",
+    "refill-task-sequence": "1.1.0"
   }
 }
