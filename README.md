@@ -2,7 +2,7 @@
 
 Gulp tasks for node projects powered by [refill](https://github.com/refilljs/refill)
 
-[<img alt="Made by Zaklinacze Kodu" src="http://refilljs.com/_assets/madeBy.svg" width="200">](http://zaklinaczekodu.com)
+[<img alt="Made by Zaklinacze Kodu" src="http://zaklinaczekodu.com/_assets/madeBy.svg" width="200">](http://zaklinaczekodu.com)
 
 [Facebook](https://www.facebook.com/zaklinaczekodu)
 
@@ -11,14 +11,15 @@ Shields
 
 [![npm](https://img.shields.io/npm/v/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)
 [![npm](https://img.shields.io/npm/l/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)
-[![npm](https://img.shields.io/npm/dm/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)<br>
-[![Travis](https://img.shields.io/travis/refilljs/refill-node/master.svg?style=flat-square)](https://travis-ci.org/refilljs/refill-node)
-[![Code Climate](https://img.shields.io/codeclimate/github/refilljs/refill-node.svg?style=flat-square)](https://codeclimate.com/github/refilljs/refill-node)<br>
-[![David](https://img.shields.io/david/refilljs/refill-node.svg?style=flat-square)](https://david-dm.org/refilljs/refill-node)
-[![David](https://img.shields.io/david/dev/refilljs/refill-node.svg?style=flat-square)](https://david-dm.org/refilljs/refill-node)<br>
+[![npm](https://img.shields.io/npm/dm/refill-node.svg?style=flat-square)](https://www.npmjs.com/package/refill-node)
+[![Travis](https://img.shields.io/travis/refilljs/refill-node/master.svg?style=flat-square)](https://travis-ci.org/refilljs/refill-node)<br>
+[![bitHound Overall Score](https://www.bithound.io/github/refilljs/refill-node/badges/score.svg)](https://www.bithound.io/github/refilljs/refill-node)
+[![bitHound Dependencies](https://www.bithound.io/github/refilljs/refill-node/badges/dependencies.svg)](https://www.bithound.io/github/refilljs/refill-node/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/refilljs/refill-node/badges/devDependencies.svg)](https://www.bithound.io/github/refilljs/refill-node/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/refilljs/refill-node/badges/code.svg)](https://www.bithound.io/github/refilljs/refill-node)<br>
 [![GitHub forks](https://img.shields.io/github/forks/refilljs/refill-node.svg?style=flat-square)](https://github.com/refilljs/refill-node)
 [![GitHub stars](https://img.shields.io/github/stars/refilljs/refill-node.svg?style=flat-square)](https://github.com/refilljs/refill-node)
-[![GitHub followers](https://img.shields.io/github/followers/refilljs.svg?style=flat-square)](https://github.com/refilljs/refill-node)
+[![GitHub watchers](https://img.shields.io/github/watchers/refilljs/refill-node.svg?style=flat-square)](https://github.com/refilljs/refill-node)
 
 Quickstart
 ----------
